@@ -42,7 +42,7 @@ export function ContactForm() {
     
 
     return(
-<form name="contact" method="POST" data-netlify="true">
+<form name="contact" method="POST" netlify>
   <p>
     <label>Name <input type="text" name="name" /></label>
   </p>
