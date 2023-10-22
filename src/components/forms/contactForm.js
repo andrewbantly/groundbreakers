@@ -33,25 +33,9 @@ export function ContactForm() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         console.log("submit")
-        console.log(formState)
         try {
-          const response = await fetch('/.netlify/functions/sendEmail', {
-            method: 'POST',
-            body: JSON.stringify(formState),
-          });
-          setFormState({
-            name: '',
-            email: '',
-            message: '',
-          })
-          if (!response.ok) {
-            console.error('Error sending email', response);
-          } else {
-            console.log('Email sent successfully');
-            // Reset form or show success message
-          }
+            console.log(formState)
         } catch (err) {
-          // Handle errors when calling the function or network errors
           console.error('Error sending email', err);
         }
     };
@@ -60,7 +44,7 @@ export function ContactForm() {
     return(
         <Box p={2} bg="white" borderRadius="lg" color="#0B0E3F" flex={{ base: '1', md: '3' }} mt={{ base: 4, md: 0 }}>
                         <VStack spacing={4} align="stretch">
-                            <form name="contact" onSubmit={handleSubmit} method="POST" netlify>
+                            <form name="contact" netlify>
                             <input type="hidden" name="form-name" value="contact" />
                                 <FormControl id="name">
                                     <FormLabel>Your Name</FormLabel>
