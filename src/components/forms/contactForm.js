@@ -30,7 +30,14 @@ const ContactForm = () => {
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: encode({ 'form-name': 'contact', ...formState }),
         })
-            .then(() => alert('Success!'))
+            .then(() => {
+                alert('Success!');
+                setFormState({
+                    name: '',
+                    email: '',
+                    message: '',
+                })
+            })
             .catch((error) => alert(error));
     };
 
