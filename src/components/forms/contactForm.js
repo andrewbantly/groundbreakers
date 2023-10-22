@@ -85,7 +85,7 @@ const ContactForm = () => {
                     placeholder="Tell us about your project"
                 />
             </FormControl>
-            <Button mt={4} colorScheme="blue" type="submit">
+            <Button mt={4} bg="white" type="submit" color={'gray.800'}>
                 Send
             </Button>
         </Box>

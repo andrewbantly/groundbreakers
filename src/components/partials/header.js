@@ -1,12 +1,12 @@
-import { Box, Flex, Heading, Text, useColorModeValue } from '@chakra-ui/react';
+import { Box, Flex, Heading, Text } from '@chakra-ui/react';
 import { Link as ChakraLink } from "@chakra-ui/react";
 import { Link as ReactRouterLink, useLocation } from "react-router-dom";
 import { useEffect } from 'react'; // Add this import
 
 export function Header() {
-    const bg = useColorModeValue("gray.200", "gray.700");
-    const color = useColorModeValue("gray.800", "white");
-    const hoverColor = useColorModeValue("blue.800", "blue.400");
+    const bg = "#6FA0BD";
+    const color = "gray.800";
+    const hoverColor = "white";
     const location = useLocation();
 
     useEffect(() => {

@@ -13,10 +13,9 @@ export function About() {
                         <Heading>Pool Excavation Specialists</Heading>
                         <Text
                             textTransform={'uppercase'}
-                            color={'blue.400'}
-                            fontWeight={600}
-                            fontSize={'sm'}
-                            bg={useColorModeValue('blue.50', 'blue.900')}
+                            color={'#6FA0BD'}
+                            fontSize={'md'}
+                            fontWeight={'bold'}
                             p={2}
                             alignSelf={'flex-start'}
                             rounded={'md'}
@@ -27,15 +26,13 @@ export function About() {
                             GroundBreakers Excavation started in 1999, by founder Mark Smith who has been part of the building industry his entire life. Mark is a master operator and has trained his son Brian as the next generation of GroundBreakers.
                         </Text>
                         <Text
-                            textTransform={'uppercase'}
-                            color={'blue.400'}
-                            fontWeight={600}
-                            fontSize={'sm'}
-                            bg={useColorModeValue('blue.50', 'blue.900')}
-                            p={2}
-                            alignSelf={'flex-start'}
-                            rounded={'md'}
-                            mt={3}
+                             textTransform={'uppercase'}
+                             color={'#6FA0BD'}
+                             fontSize={'md'}
+                             fontWeight={'bold'}
+                             p={2}
+                             alignSelf={'flex-start'}
+                             rounded={'md'}
                         >
                             What You Can Expect
                         </Text>

@@ -35,7 +35,7 @@ export function PastProjects() {
 
   return (
     <Box id="projects">
-      <Heading as="h2" size="xl" textAlign="center" m={6}>
+      <Heading as="h2" size="xl" textAlign="center" m={6} color={"gray.800"}>
         Our Projects
       </Heading>
       <Grid templateColumns={{ sm: "repeat(1, 1fr)", md: "repeat(3, 1fr)" }} gap={6}>

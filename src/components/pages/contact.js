@@ -18,8 +18,7 @@ import ContactForm from '../forms/contactForm';
 export function Contact() {
 
     return (
-        <Box bg="#9DC4FB" w="full" p={4} id="contact" color="white">
-            <Box p={4} bg="#02054B" borderRadius="lg">
+        <Box bg="#3B3B3D" w="full" p={4} id="contact" color="white">
                 <Flex
                     direction={{ base: 'column', md: 'row' }}
                     justify="space-between"
@@ -43,7 +42,7 @@ export function Contact() {
                                 cursor="default"
                                 role="presentation"
                             >
-                                <Icon as={MdPhone} color="#1970F1" marginRight="2" />
+                                <Icon as={MdPhone} color="white" marginRight="2" />
                                 <Text fontSize={'xl'}>(916) 740-0800</Text>
                             </Flex>
                             <Flex
@@ -53,7 +52,7 @@ export function Contact() {
                                 cursor="default"
                                 role="presentation"
                             >
-                                <Icon as={MdEmail} color="#1970F1" marginRight="2" />
+                                <Icon as={MdEmail} color="white" marginRight="2" />
                                 <Text fontSize={'xl'}>briangroundbreakers8@gmail.com</Text>
                             </Flex>
                             <Flex
@@ -63,7 +62,7 @@ export function Contact() {
                                 cursor="default"
                                 role="presentation"
                             >
-                                <Icon as={MdLocationOn} color="#1970F1" marginRight="2" />
+                                <Icon as={MdLocationOn} color="white" marginRight="2" />
                                 <Text fontSize={'xl'}>Loomis, California</Text>
                             </Flex>
                             <Image
@@ -78,7 +77,6 @@ export function Contact() {
                     </VStack>
                     <ContactForm />
                 </Flex>
-            </Box>
         </Box>
     );
 }
