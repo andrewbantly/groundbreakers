@@ -1,57 +1,74 @@
-import {
-    Box,
-    VStack,
-    Button,
-    FormControl,
-    FormLabel,
-    Input,
-    InputGroup,
-    InputLeftElement,
-    Textarea,
-} from '@chakra-ui/react';
-import {
-    MdOutlineEmail,
-} from 'react-icons/md';
-import { BsPerson } from 'react-icons/bs';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
-export function ContactForm() {
+const ContactForm = () => {
+  const [formState, setFormState] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
 
-    const [formState, setFormState] = useState({
-        name: '',
-        email: '',
-        message: '',
-    });
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+      )
+      .join('&');
+  };
 
-    const handleChange = (e) => {
-        setFormState({
-            ...formState,
-            [e.target.name]: e.target.value,
-        });
-    };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({ 'form-name': 'contact', ...formState }),
+    })
+      .then(() => alert('Success!'))
+      .catch((error) => alert(error));
+  };
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        console.log("submit")
-        try {
-            console.log(formState)
-        } catch (err) {
-          console.error('Error sending email', err);
-        }
-    };
-    
+  const handleChange = (e) =>
+    setFormState({ ...formState, [e.target.name]: e.target.value });
 
-    return(
-<form name="contact" method="POST" netlify>
-  <p>
-    <label>Name <input type="text" name="name" /></label>
-  </p>
-  <p>
-    <label>Email <input type="email" name="email" /></label>
-  </p>
-  <p>
-    <button type="submit">Send</button>
-  </p>
-</form>
-    )
-}
+  return (
+    <form onSubmit={handleSubmit} name="contact" data-netlify="true">
+      <input type="hidden" name="form-name" value="contact" />
+      <p>
+        <label>
+          Your Name:{' '}
+          <input
+            type="text"
+            name="name"
+            value={formState.name}
+            onChange={handleChange}
+          />
+        </label>
+      </p>
+      <p>
+        <label>
+          Your Email:{' '}
+          <input
+            type="email"
+            name="email"
+            value={formState.email}
+            onChange={handleChange}
+          />
+        </label>
+      </p>
+      <p>
+        <label>
+          Message:{' '}
+          <textarea
+            name="message"
+            value={formState.message}
+            onChange={handleChange}
+          />
+        </label>
+      </p>
+      <p>
+        <button type="submit">Send</button>
+      </p>
+    </form>
+  );
+};
+
+export default ContactForm;
