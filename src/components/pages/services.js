@@ -70,7 +70,7 @@ export function ServicesPage() {
               color={'white'}
               textAlign="center"
               textShadow="2px 2px 2px rgba(0, 0, 0, 0.3)">
-              Specializing in pool excavation in Sacramento for over 25 years
+              Specializing in pool excavation in Sacramento for over 20 years
             </Text>
           </Stack>
 
