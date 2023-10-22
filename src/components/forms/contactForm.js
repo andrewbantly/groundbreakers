@@ -44,8 +44,7 @@ export function ContactForm() {
     return(
         <Box p={2} bg="white" borderRadius="lg" color="#0B0E3F" flex={{ base: '1', md: '3' }} mt={{ base: 4, md: 0 }}>
                         <VStack spacing={4} align="stretch">
-                        <form name="contact" method="POST" data-netlify="true">
-                            <input type="hidden" name="form-name" value="contact" />
+                        <form name="contact" method="POST" data-netlify="true" onSubmit={"submit"}>
                                 <FormControl id="name">
                                     <FormLabel>Your Name</FormLabel>
                                     <InputGroup>
