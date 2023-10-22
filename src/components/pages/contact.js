@@ -13,7 +13,7 @@ import {
     MdEmail,
     MdLocationOn,
 } from 'react-icons/md';
-import { ContactForm } from '../forms/contactForm';
+import ContactForm from '../forms/contactForm';
 
 export function Contact() {
 
