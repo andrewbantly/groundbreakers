@@ -15,7 +15,7 @@ import {
 const services = [
   {
     title: 'Pool Excavation',
-    content: 'Specialized in prepping and excavating custom in-ground pools.',
+    content: 'Specialized in prepping and excavating custom in-ground pools for over 20 years.',
   },
   {
     title: 'Precision Dirt Work',
@@ -36,35 +36,35 @@ export function ServicesPage() {
       bgRepeat="no-repeat"
       bgSize="cover"
       position={'relative'}
-      height="100vh" // This covers the full height of the viewport
+      height="100vh"
       d="flex"
       alignItems="center"
       justifyContent="center"
     >
       <Container maxW={'container.xl'} zIndex={10}>
         <VStack spacing={10} p={10}>
-          <Stack
+          {/* <Stack
             spacing={5}
             bg={'rgba(0, 0, 0, 0.7)'} 
             p={6}
             rounded={'md'}
-          >
+          > */}
             <Image
               src="/photos/Groundbreakers.jpg"
               alt="Groundbreakers"
-              w="25%"
+              w="45%"
               maxH="400px" 
               objectFit="cover"
               mx="auto"
             />
-            <Text
+            {/* <Text
               fontSize={'2xl'}
               color={'white'}
               textAlign="center"
               textShadow="2px 2px 2px rgba(0, 0, 0, 0.3)">
               Specializing in pool excavation in Sacramento for over 20 years
-            </Text>
-          </Stack>
+            </Text> */}
+          {/* </Stack> */}
 
           <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10} w="full">
             {services.map((service, index) => (

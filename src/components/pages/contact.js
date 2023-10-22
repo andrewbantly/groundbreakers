@@ -30,8 +30,8 @@ export function Contact() {
                         flex={{ base: '1', md: '2' }}
                         maxW={{ base: '100%', md: 'lg' }}
                     >
-                        <Heading>Contact</Heading>
-                        <Text color="gray.400">
+                        <Heading ml={2}>Contact</Heading>
+                        <Text color="gray.400" ml={2}>
                             Fill out the form to contact us
                         </Text>
                         <VStack spacing={4} align="start">
@@ -42,7 +42,7 @@ export function Contact() {
                                 cursor="default"
                                 role="presentation"
                             >
-                                <Icon as={MdPhone} color="white" marginRight="2" />
+                                <Icon as={MdPhone} color="white" marginRight="2" ml={2} />
                                 <Text fontSize={'xl'}>(916) 740-0800</Text>
                             </Flex>
                             <Flex
@@ -52,8 +52,8 @@ export function Contact() {
                                 cursor="default"
                                 role="presentation"
                             >
-                                <Icon as={MdEmail} color="white" marginRight="2" />
-                                <Text fontSize={'xl'}>briangroundbreakers8@gmail.com</Text>
+                                <Icon as={MdEmail} color="white" marginRight="2" ml={2}/>
+                                <Text fontSize={'xl'} >briangroundbreakers8@gmail.com</Text>
                             </Flex>
                             <Flex
                                 as="div"
@@ -62,7 +62,7 @@ export function Contact() {
                                 cursor="default"
                                 role="presentation"
                             >
-                                <Icon as={MdLocationOn} color="white" marginRight="2" />
+                                <Icon as={MdLocationOn} color="white" marginRight="2" ml={2}/>
                                 <Text fontSize={'xl'}>Loomis, California</Text>
                             </Flex>
                             <Image

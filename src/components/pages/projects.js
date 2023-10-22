@@ -34,7 +34,7 @@ export function PastProjects() {
   };
 
   return (
-    <Box id="projects">
+    <Box id="projects" mb={6}>
       <Heading as="h2" size="xl" textAlign="center" m={6} color={"gray.800"}>
         Our Projects
       </Heading>
