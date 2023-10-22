@@ -14,7 +14,7 @@ import {
 // Services data
 const services = [
   {
-    title: 'Swimming Pool Excavation',
+    title: 'Pool Excavation',
     content: 'Specialized in prepping and excavating custom in-ground pools.',
   },
   {
@@ -57,14 +57,6 @@ export function ServicesPage() {
               objectFit="cover"
               mx="auto"
             />
-            {/* <Heading
-              mb={5}
-              fontSize={{ base: '3xl', md: '5xl' }}
-              color={'white'}
-              textAlign="center"
-              textShadow="2px 2px 2px rgba(0, 0, 0, 0.3)">
-              Our Services
-            </Heading> */}
             <Text
               fontSize={'2xl'}
               color={'white'}
@@ -84,7 +76,7 @@ export function ServicesPage() {
                 p={5}  // Padding
                 color={'gray.800'}  // Text color for readability
               >
-                <Text fontFamily={'heading'} fontSize={'3xl'} mb={3}>
+                <Text fontFamily={'heading'} fontSize={'3xl'}>
                   {service.title}
                 </Text>
                 <Text fontSize={'xl'}>

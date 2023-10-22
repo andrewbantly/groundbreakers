@@ -23,7 +23,7 @@ export function About() {
                             Our Story
                         </Text>
                         <Text color={'white'} fontSize={'xl'}>
-                            GroundBreakers Excavation started in 1999, by founder Mark Smith who has been part of the building industry his entire life. Mark is a master operator and has trained his son Brian as the next generation of GroundBreakers.
+                            GroundBreakers Excavation started in 2002, by founder Mark Smith who has been part of the building industry his entire life. Mark is a master operator and has trained his son Brian as the next generation of GroundBreakers.
                         </Text>
                         <Text
                              textTransform={'uppercase'}

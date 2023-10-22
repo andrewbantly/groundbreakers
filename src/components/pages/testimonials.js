@@ -19,7 +19,7 @@ export function Testimonials() {
             "We always wanted a backyard pool, and choosing GroundBreakers Excavation was the best first step we could have taken. At first, we were nervous about the digging part, but the team was professional and knew a lot about what they were doing. They showed up on time and were excited about the project, which made us feel at ease."
           </Text>
           <Box textAlign="center" mt={4}>
-            <Text fontWeight={600} color={'blue.800'}>Laurie</Text>
+            <Text fontWeight={600} color={'blue.800'}>James</Text>
           </Box>
         </Box>
       </Flex>

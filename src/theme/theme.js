@@ -2,8 +2,8 @@ import { extendTheme } from "@chakra-ui/react";
 
 const theme = extendTheme({
   fonts: {
-    heading: "'Rajdhani', sans-serif",
-    body: "'Rajdhani', sans-serif",
+    heading: "'Istok Web', 'Rajdhani', sans-serif",
+    body: "'Istok Web', 'Rajdhani', sans-serif",
   },
   colors: {
     brand: {
