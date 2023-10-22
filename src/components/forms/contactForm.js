@@ -1,74 +1,88 @@
 import React, { useState } from 'react';
+import {
+    FormControl,
+    FormLabel,
+    Input,
+    Textarea,
+    Button,
+    Box,
+} from '@chakra-ui/react';
 
 const ContactForm = () => {
-  const [formState, setFormState] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
+    const [formState, setFormState] = useState({
+        name: '',
+        email: '',
+        message: '',
+    });
 
-  const encode = (data) => {
-    return Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
-      )
-      .join('&');
-  };
+    const encode = (data) => {
+        return Object.keys(data)
+            .map(
+                (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+            )
+            .join('&');
+    };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'contact', ...formState }),
-    })
-      .then(() => alert('Success!'))
-      .catch((error) => alert(error));
-  };
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: encode({ 'form-name': 'contact', ...formState }),
+        })
+            .then(() => alert('Success!'))
+            .catch((error) => alert(error));
+    };
 
-  const handleChange = (e) =>
-    setFormState({ ...formState, [e.target.name]: e.target.value });
+    const handleChange = (e) =>
+        setFormState({ ...formState, [e.target.name]: e.target.value });
 
-  return (
-    <form onSubmit={handleSubmit} name="contact" data-netlify="true">
-      <input type="hidden" name="form-name" value="contact" />
-      <p>
-        <label>
-          Your Name:{' '}
-          <input
-            type="text"
-            name="name"
-            value={formState.name}
-            onChange={handleChange}
-          />
-        </label>
-      </p>
-      <p>
-        <label>
-          Your Email:{' '}
-          <input
-            type="email"
-            name="email"
-            value={formState.email}
-            onChange={handleChange}
-          />
-        </label>
-      </p>
-      <p>
-        <label>
-          Message:{' '}
-          <textarea
-            name="message"
-            value={formState.message}
-            onChange={handleChange}
-          />
-        </label>
-      </p>
-      <p>
-        <button type="submit">Send</button>
-      </p>
-    </form>
-  );
+    return (
+        <Box 
+            as="form" 
+            onSubmit={handleSubmit} 
+            name="contact" 
+            data-netlify="true" 
+            p={4} 
+            width="100%"
+            maxW="500px"
+            mx="auto"
+        >
+            <input type="hidden" name="form-name" value="contact" />
+            <FormControl id="name" isRequired mt={4}>
+                <FormLabel>Your Name</FormLabel>
+                <Input
+                    type="text"
+                    name="name"
+                    value={formState.name}
+                    onChange={handleChange}
+                    placeholder="Enter your name"
+                />
+            </FormControl>
+            <FormControl id="email" isRequired mt={4}>
+                <FormLabel>Your Email</FormLabel>
+                <Input
+                    type="email"
+                    name="email"
+                    value={formState.email}
+                    onChange={handleChange}
+                    placeholder="Enter your email address"
+                />
+            </FormControl>
+            <FormControl id="message" isRequired mt={4}>
+                <FormLabel>Message</FormLabel>
+                <Textarea
+                    name="message"
+                    value={formState.message}
+                    onChange={handleChange}
+                    placeholder="Tell us about your project"
+                />
+            </FormControl>
+            <Button mt={4} colorScheme="blue" type="submit">
+                Send
+            </Button>
+        </Box>
+    );
 };
 
 export default ContactForm;

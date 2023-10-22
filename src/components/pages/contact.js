@@ -25,7 +25,12 @@ export function Contact() {
                     justify="space-between"
                     align="start"
                 >
-                    <VStack align="start" spacing={4} flex={{ base: '1', md: '2' }}>
+                    <VStack
+                        align="start"
+                        spacing={4}
+                        flex={{ base: '1', md: '2' }}
+                        maxW={{ base: '100%', md: 'lg' }}
+                    >
                         <Heading>Contact</Heading>
                         <Text color="gray.400">
                             Fill out the form to contact us
@@ -71,7 +76,7 @@ export function Contact() {
                             />
                         </VStack>
                     </VStack>
-                    <ContactForm/>
+                    <ContactForm />
                 </Flex>
             </Box>
         </Box>
