@@ -42,54 +42,16 @@ export function ContactForm() {
     
 
     return(
-        <Box p={2} bg="white" borderRadius="lg" color="#0B0E3F" flex={{ base: '1', md: '3' }} mt={{ base: 4, md: 0 }}>
-                        <VStack spacing={4} align="stretch">
-                        <form name="contact" method="POST" data-netlify="true" onSubmit={"submit"}>
-                                <FormControl id="name">
-                                    <FormLabel>Your Name</FormLabel>
-                                    <InputGroup>
-                                        <InputLeftElement pointerEvents="none" children={<BsPerson color="gray.300" />} />
-                                        <Input
-                                            bg={'blackAlpha.300'}
-                                            type="text"
-                                            placeholder="John Doe"
-                                            _placeholder={{ color: 'gray.600' }}
-                                            name="name"
-                                            value={formState.name}
-                                            onChange={handleChange}
-                                        />
-                                    </InputGroup>
-                                </FormControl>
-                                <FormControl id="email">
-                                    <FormLabel>Email</FormLabel>
-                                    <InputGroup>
-                                        <InputLeftElement pointerEvents="none" children={<MdOutlineEmail color="gray.300" />} />
-                                        <Input
-                                            type="email"
-                                            bg={'blackAlpha.300'}
-                                            placeholder="example@domain.com"
-                                            _placeholder={{ color: 'gray.600' }}
-                                            name="email"
-                                            value={formState.email}
-                                            onChange={handleChange} />
-                                    </InputGroup>
-                                </FormControl>
-                                <FormControl id="message">
-                                    <FormLabel>Message</FormLabel>
-                                    <Textarea
-                                        placeholder="Tell us about your project"
-                                        bg={'blackAlpha.300'}
-                                        _placeholder={{ color: 'gray.600' }}
-                                        name="message"
-                                        value={formState.message}
-                                        onChange={handleChange}
-                                    />
-                                </FormControl>
-                                <Button type="submit" colorScheme="blue" variant="solid" mt={2}>
-                                    Send Message
-                                </Button>
-                            </form>
-                        </VStack>
-                    </Box>
+<form name="contact" netlify>
+  <p>
+    <label>Name <input type="text" name="name" /></label>
+  </p>
+  <p>
+    <label>Email <input type="email" name="email" /></label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+</form>
     )
 }
