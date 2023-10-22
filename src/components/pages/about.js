@@ -49,7 +49,7 @@ export function About() {
                         <Image
                             rounded={'md'}
                             alt={'feature image'}
-                            src={'/photos/about-temp.jpg'}
+                            src={'/photos/smith-family.jpg'}
                             objectFit={'cover'}
                         />
                     </Box>
