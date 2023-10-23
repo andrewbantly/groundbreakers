@@ -18,7 +18,7 @@ import ContactForm from '../forms/contactForm';
 export function Contact() {
 
     return (
-        <Box bg="#3B3B3D" w="full" p={4} id="contact" color="white">
+        <Box bg="black" w="full" p={4} id="contact" color="white">
                 <Flex
                     direction={{ base: 'column', md: 'row' }}
                     justify="space-between"
