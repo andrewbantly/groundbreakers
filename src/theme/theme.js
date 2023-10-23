@@ -1,6 +1,13 @@
 import { extendTheme } from "@chakra-ui/react";
 
 const theme = extendTheme({
+    breakpoints: {
+        sm: "360px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1536px",
+      },
   fonts: {
     heading: "'Istok Web', 'Rajdhani', sans-serif",
     body: "'Istok Web', 'Rajdhani', sans-serif",

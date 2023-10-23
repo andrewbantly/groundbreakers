@@ -36,25 +36,21 @@ export function ServicesPage() {
       bgRepeat="no-repeat"
       bgSize="cover"
       position={'relative'}
-      height="100vh"
+      minH="100vh"
       d="flex"
       alignItems="center"
       justifyContent="center"
+      paddingBottom={{ base: "6", sm: "10" }} 
     >
       <Container maxW={'container.xl'} zIndex={10}>
         <VStack spacing={10} p={10}>
-          {/* <Stack
-            spacing={5}
-            bg={'rgba(0, 0, 0, 0.7)'} 
-            p={6}
-            rounded={'md'}
-          > */}
             <Image
               src="/photos/Groundbreakers.jpg"
               alt="Groundbreakers"
-              w="45%"
+              w={{ base: "80%", sm: "100%", md: "70%", lg: "60%", xl: "50%", "2xl": "45%" }}
+              minH={{ base: "150px", sm: "200px", md: "250px", lg: "300px", xl: "350px", "2xl": "400px" }}
               maxH="400px" 
-              objectFit="cover"
+              objectFit="contain"
               mx="auto"
             />
             {/* <Text
