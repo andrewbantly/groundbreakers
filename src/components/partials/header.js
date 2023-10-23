@@ -3,7 +3,7 @@ import { Box, Flex, Heading, Text, IconButton, Drawer, DrawerBody, DrawerHeader,
 import { HamburgerIcon } from '@chakra-ui/icons';
 import { Link as ChakraLink } from "@chakra-ui/react";
 import { Link as ReactRouterLink, useLocation } from "react-router-dom";
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useCallback } from 'react';
 
 
 export function Header() {
@@ -35,6 +35,10 @@ export function Header() {
         }
     }, [location]);
 
+    const handleClose = useCallback(() => {
+        onClose();
+    }, [onClose]);
+
     return (
         <Box bg={bg} color={color} px={4} py={2} boxShadow="md">
             <Flex
@@ -44,7 +48,7 @@ export function Header() {
                 wrap={'wrap'}
             >
                 <Box>
-                    <Heading as="h1" size="xl">
+                    <Heading as="h1" size={{ base: 'md', md: 'xl' }}>
                         GroundBreakers Excavation
                     </Heading>
                     <Text>
@@ -78,24 +82,24 @@ export function Header() {
             </Flex>
             <Drawer isOpen={isOpen} placement="right" onClose={onClose} finalFocusRef={btnRef}>
                 <DrawerOverlay />
-                <DrawerContent>
+                <DrawerContent bg={color} color={bg}>
                     <DrawerCloseButton />
                     <DrawerHeader>Navigation</DrawerHeader>
                     <DrawerBody>
                         <VStack padding={4}>
-                            <ChakraLink as={ReactRouterLink} to='/#services' fontWeight="medium" _hover={{ color: hoverColor, textDecoration: "none" }}>
+                            <ChakraLink as={ReactRouterLink} to='/#services' fontWeight="medium" onClick={handleClose} _hover={{ color: hoverColor, textDecoration: "none" }}>
                                 Services
                             </ChakraLink>
-                            <ChakraLink as={ReactRouterLink} to='/#projects' fontWeight="medium" _hover={{ color: hoverColor, textDecoration: "none" }}>
+                            <ChakraLink as={ReactRouterLink} to='/#projects' fontWeight="medium" onClick={handleClose} _hover={{ color: hoverColor, textDecoration: "none" }}>
                                 Past Projects
                             </ChakraLink>
-                            <ChakraLink as={ReactRouterLink} to='/#story' fontWeight="medium" _hover={{ color: hoverColor, textDecoration: "none" }}>
+                            <ChakraLink as={ReactRouterLink} to='/#story' fontWeight="medium" onClick={handleClose} _hover={{ color: hoverColor, textDecoration: "none" }}>
                                 Our Story
                             </ChakraLink>
-                            <ChakraLink as={ReactRouterLink} to='/#testimonials' fontWeight="medium" _hover={{ color: hoverColor, textDecoration: "none" }}>
+                            <ChakraLink as={ReactRouterLink} to='/#testimonials' fontWeight="medium" onClick={handleClose} _hover={{ color: hoverColor, textDecoration: "none" }}>
                                 Testimonials
                             </ChakraLink>
-                            <ChakraLink as={ReactRouterLink} to='/#contact' fontWeight="medium" _hover={{ color: hoverColor, textDecoration: "none" }}>
+                            <ChakraLink as={ReactRouterLink} to='/#contact' fontWeight="medium" onClick={handleClose} _hover={{ color: hoverColor, textDecoration: "none" }}>
                                 Contact
                             </ChakraLink>
                         </VStack>
