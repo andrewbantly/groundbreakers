@@ -16,9 +16,9 @@ export function About() {
                             color={'#6FA0BD'}
                             fontSize={'md'}
                             fontWeight={'bold'}
-                            p={2}
                             alignSelf={'flex-start'}
                             rounded={'md'}
+                            mt={2}
                         >
                             Our Story
                         </Text>
@@ -30,9 +30,9 @@ export function About() {
                              color={'#6FA0BD'}
                              fontSize={'md'}
                              fontWeight={'bold'}
-                             p={2}
                              alignSelf={'flex-start'}
                              rounded={'md'}
+                             mt={2}
                         >
                             What You Can Expect
                         </Text>
