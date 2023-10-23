@@ -26,6 +26,9 @@ export function PastProjects() {
   '/photos/projects-image-07.jpg',
   '/photos/projects-image-08.jpg',
   '/photos/projects-image-09.jpg',
+  '/photos/projects-image-10.jpg',
+  '/photos/projects-image-11.jpg',
+  '/photos/projects-image-12.jpg',
 ];
 
   const handleImageClick = (url) => {
