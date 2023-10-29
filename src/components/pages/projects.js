@@ -35,21 +35,21 @@ export function PastProjects() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [selectedImage, setSelectedImage] = useState('');
 
- // Images for the carousel
- const projects = [
-  '/photos/projects-image-01.jpg',
-  '/photos/projects-image-02.jpg',
-  '/photos/projects-image-03.jpg',
-  '/photos/projects-image-04.jpg',
-  '/photos/projects-image-05.jpg',
-  '/photos/projects-image-06.jpg',
-  '/photos/projects-image-07.jpg',
-  '/photos/projects-image-08.jpg',
-  '/photos/projects-image-09.jpg',
-  '/photos/projects-image-10.jpg',
-  '/photos/projects-image-11.jpg',
-  '/photos/projects-image-12.jpg',
-];
+  // Images for the carousel
+  const projects = [
+    '/photos/projects-image-01.jpg',
+    '/photos/projects-image-02.jpg',
+    '/photos/projects-image-03.jpg',
+    '/photos/projects-image-04.jpg',
+    '/photos/projects-image-05.jpg',
+    '/photos/projects-image-06.jpg',
+    '/photos/projects-image-07.jpg',
+    '/photos/projects-image-08.jpg',
+    '/photos/projects-image-09.jpg',
+    '/photos/projects-image-10.jpg',
+    '/photos/projects-image-11.jpg',
+    '/photos/projects-image-12.jpg',
+  ];
 
   const handleImageClick = (url) => {
     setSelectedImage(url);
@@ -82,7 +82,7 @@ export function PastProjects() {
         <ModalOverlay />
         <ModalContent>
           <ModalCloseButton />
-          <Image src={selectedImage} alt="Selected project" width="100%" tabIndex="-1" id="selectedImageModal"/>
+          <Image src={selectedImage} alt="Selected project" width="100%" tabIndex="-1" id="selectedImageModal" />
         </ModalContent>
       </Modal>
     </Box>
