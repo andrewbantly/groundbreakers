@@ -64,11 +64,13 @@ export function Header() {
 
     const handleClose = useCallback(() => {
         onClose();
+        btnRef.current?.focus();
     }, [onClose]);
 
     return (
         <Box bg={bg} color={color} px={4} py={2} boxShadow="md">
             <Flex
+                as='nav'
                 flexDirection={{ base: 'row', md: 'row' }}
                 alignItems='center'
                 justifyContent={{ base: 'space-between', md: 'space-between' }}
@@ -83,19 +85,19 @@ export function Header() {
                     </Text>
                 </Box>
                 <Box display={{ base: "none", lg: "block" }} textAlign={{ base: 'center', md: 'right' }}>
-                    <ChakraLink as={ReactRouterLink} to='/#services' fontWeight="medium" _hover={{ color: hoverColor, textDecoration: "none" }} ml={4}>
+                    <ChakraLink aria-label="View services" as={ReactRouterLink} to='/#services' fontWeight="medium" _hover={{ color: hoverColor, textDecoration: "none" }} ml={4}>
                         Services
                     </ChakraLink>
-                    <ChakraLink as={ReactRouterLink} to='/#projects' fontWeight="medium" _hover={{ color: hoverColor, textDecoration: "none" }} ml={4}>
+                    <ChakraLink aria-label="View past projects" as={ReactRouterLink} to='/#projects' fontWeight="medium" _hover={{ color: hoverColor, textDecoration: "none" }} ml={4}>
                         Past Projects
                     </ChakraLink>
-                    <ChakraLink as={ReactRouterLink} to='/#story' fontWeight="medium" _hover={{ color: hoverColor, textDecoration: "none" }} ml={4}>
+                    <ChakraLink aria-label="View background story of company" as={ReactRouterLink} to='/#story' fontWeight="medium" _hover={{ color: hoverColor, textDecoration: "none" }} ml={4}>
                         Our Story
                     </ChakraLink>
-                    <ChakraLink as={ReactRouterLink} to='/#testimonials' fontWeight="medium" _hover={{ color: hoverColor, textDecoration: "none" }} ml={4}>
+                    <ChakraLink aria-label="View testimonials" as={ReactRouterLink} to='/#testimonials' fontWeight="medium" _hover={{ color: hoverColor, textDecoration: "none" }} ml={4}>
                         Testimonials
                     </ChakraLink>
-                    <ChakraLink as={ReactRouterLink} to='/#contact' fontWeight="medium" _hover={{ color: hoverColor, textDecoration: "none" }} ml={4}>
+                    <ChakraLink aria-label="View contact information" as={ReactRouterLink} to='/#contact' fontWeight="medium" _hover={{ color: hoverColor, textDecoration: "none" }} ml={4}>
                         Contact
                     </ChakraLink>
                     <Text>(916) 740-0800</Text>
