@@ -1,3 +1,13 @@
+/**
+ * ContactForm Component
+ * 
+ * A contact form component using Chakra UI for styling.
+ * The form captures the user's name, email, and message.
+ * Upon submission, the form data is encoded and sent as a POST request.
+ * Successful submission resets the form and alerts the user.
+ * 
+ * Dependencies: React, useState hook, and Chakra UI components.
+ */
 import React, { useState } from 'react';
 import {
     FormControl,
@@ -9,20 +19,24 @@ import {
 } from '@chakra-ui/react';
 
 const ContactForm = () => {
+    // Local state for form data
     const [formState, setFormState] = useState({
         name: '',
         email: '',
         message: '',
     });
 
+    // Utility function to encode the form data for submission
     const encode = (data) => {
         return Object.keys(data)
             .map(
+                // URL-encode each key-value pair
                 (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
             )
             .join('&');
     };
 
+    // Handler function for form submission
     const handleSubmit = (e) => {
         e.preventDefault();
         fetch('/', {
@@ -30,6 +44,7 @@ const ContactForm = () => {
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: encode({ 'form-name': 'contact', ...formState }),
         })
+        // Reset form fields after successful submission
             .then(() => {
                 alert('Success!');
                 setFormState({
@@ -41,6 +56,7 @@ const ContactForm = () => {
             .catch((error) => alert(error));
     };
 
+    // Update formState upon input changes
     const handleChange = (e) =>
         setFormState({ ...formState, [e.target.name]: e.target.value });
 
