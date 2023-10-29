@@ -1,3 +1,17 @@
+/**
+ * Contact Component
+ * 
+ * This component renders a contact section with a styled form and contact information, using Chakra UI for consistent and responsive styling.
+ * 
+ * The component is composed of a main Box container, which uses Flexbox to layout the contact information and the ContactForm component side by side, with responsive adjustments.
+ * 
+ * The contact information is presented using iconography for phone, email, and location, each accompanied by corresponding text.
+ * 
+ * The ContactForm is a nested component that is imported and used to capture and handle user submissions.
+ * 
+ * Dependencies: React, Chakra UI, and React Icons.
+ */
+
 import React from 'react';
 import {
     Box,
