@@ -20,14 +20,20 @@
  * Notes:
  * - The Main component itself is purely structural and does not render any visible UI elements directly. Its responsibility is limited to the organization and rendering of sub-components.
  */
+import { ServicesPage } from "./services"
+import { PastProjects } from "./projects"
+import { Contact } from "./contact"
+import { Testimonials } from "./testimonials"
+import { About } from "./about"
+
 export function Main() {
     return(
         <>
-            <ServicesPage />
-            <PastProjects />
-            <About />
-            <Testimonials />
-            <Contact />
+        <ServicesPage/>
+        <PastProjects/>
+        <About/>
+        <Testimonials/>
+        <Contact/>
         </>
-    );
+    )
 }
