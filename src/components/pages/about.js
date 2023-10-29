@@ -1,4 +1,26 @@
-import { Container, Box, Image, Heading, Text, useColorModeValue, Spacer } from '@chakra-ui/react';
+/**
+ * About Component
+ * 
+ * Purpose:
+ * Renders the "About" section of the website, providing users with the backstory of GroundBreakers Excavation and what clients can expect from their services. This component is designed to be accessible and to follow best practices in semantic HTML and assistive technology compatibility.
+ *
+ * Structure:
+ * - The main container is a `Box` with a `section` role for semantic grouping.
+ * - A `Container` controls the maximum width of the content for better readability.
+ * - Two main `Box` components divide the section into text and image areas:
+ *   - The first `Box` contains `Heading` and `Text` components, detailing the company's history and values.
+ *   - The second `Box` includes an `Image` component with a descriptive `alt` attribute.
+ * - Styling is applied for a visually appealing layout, with responsive adjustments for different screen sizes.
+ * - The component emphasizes color contrast to maintain readability and visibility for all users.
+ *
+ * Accessibility Features:
+ * - Semantic elements and ARIA roles where needed to ensure content structure is conveyed to screen readers.
+ * - Text colors are chosen to ensure sufficient contrast against the background.
+ * - Descriptive alt text for the image provides context for users who rely on screen readers.
+ * - Responsive design ensures that content is accessible on devices with varying screen sizes.
+ */
+
+import { Container, Box, Image, Heading, Text } from '@chakra-ui/react';
 
 export function About() {
     return (
@@ -45,7 +67,7 @@ export function About() {
                     <Box flex={1}>
                         <Image
                             rounded={'md'}
-                            alt={'feature image'}
+                            alt={'Image of Mark and Brian Smith of Groundbreakers'}
                             src={'/photos/smith-family.jpg'}
                             objectFit={'cover'}
                         />
