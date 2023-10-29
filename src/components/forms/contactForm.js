@@ -54,6 +54,7 @@ const ContactForm = () => {
             width="100%"
             maxW="500px"
             mx="auto"
+            aria-label='Contact Form'
         >
             <input type="hidden" name="form-name" value="contact" />
             <FormControl id="name" isRequired mt={4}>
