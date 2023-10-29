@@ -34,6 +34,9 @@ export function PastProjects() {
   const handleImageClick = (url) => {
     setSelectedImage(url);
     onOpen();
+    setTimeout(() => { // Allow time for the modal to render
+      document.getElementById('selectedImageModal').focus();
+    }, 100);
   };
 
   return (
@@ -46,7 +49,7 @@ export function PastProjects() {
           <Box key={index} as="button" onClick={() => handleImageClick(url)}>
             <Image
               src={url}
-              alt={`Project ${index + 1}`}
+              alt={`Pool excavation by GroundBreakers - Project ${index + 1}`}
               width="100%"
               height="100%"
               objectFit="cover"
@@ -59,7 +62,7 @@ export function PastProjects() {
         <ModalOverlay />
         <ModalContent>
           <ModalCloseButton />
-          <Image src={selectedImage} alt="Selected project" width="100%"/>
+          <Image src={selectedImage} alt="Selected project" width="100%" tabIndex="-1" id="selectedImageModal"/>
         </ModalContent>
       </Modal>
     </Box>

@@ -32,7 +32,7 @@ export function About() {
                     justifyContent={{ base: 'center', md: 'space-between' }}
                 >
                     <Box flex={1} p={8}>
-                        <Heading>Pool Excavation Specialists</Heading>
+                        <Heading as="h2">Pool Excavation Specialists</Heading>
                         <Text
                             textTransform={'uppercase'}
                             color={'#6FA0BD'}
