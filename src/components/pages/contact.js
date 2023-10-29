@@ -40,7 +40,6 @@ export function Contact() {
                                 align="center"
                                 color="white"
                                 cursor="default"
-                                role="presentation"
                             >
                                 <Icon as={MdPhone} color="white" marginRight="2" ml={2} />
                                 <Text fontSize={'xl'}>(916) 740-0800</Text>
@@ -50,7 +49,6 @@ export function Contact() {
                                 align="center"
                                 color="white"
                                 cursor="default"
-                                role="presentation"
                             >
                                 <Icon as={MdEmail} color="white" marginRight="2" ml={2}/>
                                 <Text fontSize={'xl'} >briangroundbreakers8@gmail.com</Text>
@@ -60,14 +58,13 @@ export function Contact() {
                                 align="center"
                                 color="white"
                                 cursor="default"
-                                role="presentation"
                             >
                                 <Icon as={MdLocationOn} color="white" marginRight="2" ml={2}/>
                                 <Text fontSize={'xl'}>Loomis, California</Text>
                             </Flex>
                             <Image
                                 src="/photos/Groundbreakers.jpg"
-                                alt="Groundbreakers"
+                                alt="Groundbreakers logo"
                                 w="60%"
                                 maxH="400px"
                                 objectFit="cover"
