@@ -1,3 +1,23 @@
+/**
+ * PastProjects Component
+ *
+ * Purpose:
+ * Displays a grid of images representing the past projects completed by the organization. The component allows users to click on images to view them in a larger modal window, enhancing the accessibility with keyboard navigation and ARIA attributes for assistive technologies.
+ *
+ * Structure:
+ * - The main container is a `Box` with an implicit role of `group`, organizing the content related to past projects.
+ * - A `Heading` component provides a semantic header for the section.
+ * - A `Grid` component presents project thumbnails in a responsive layout.
+ * - Clicking a thumbnail opens a `Modal` component, which presents the selected image in a larger view.
+ *
+ * Accessibility Features:
+ * - Each image thumbnail is wrapped in a `Box` with a role of `button` to be operable via keyboard and recognizable by screen readers.
+ * - Descriptive `alt` text for each image conveys the content of the images to screen reader users.
+ * - The modal can be closed with a keyboard, thanks to the `ModalCloseButton`.
+ * - Focus management is provided by the modal functionality, ensuring that users navigating via keyboard do not lose their place in the interface.
+ * - The images in the modal have a unique `id` and descriptive `alt` text, further improving the context for assistive technology users.
+ */
+
 import React, { useState } from 'react';
 import {
   Box,
