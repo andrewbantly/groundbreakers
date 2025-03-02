@@ -80,9 +80,9 @@ export function Header() {
                     <Heading as="h1" size={{ base: 'md', md: 'xl' }}>
                         GroundBreakers Excavation
                     </Heading>
-                    <Text>
+                    {/* <Text>
                         CA LIC #811786
-                    </Text>
+                    </Text> */}
                 </Box>
                 <Box display={{ base: "none", lg: "block" }} textAlign={{ base: 'center', md: 'right' }}>
                     <ChakraLink aria-label="View services" as={ReactRouterLink} to='/#services' fontWeight="medium" _hover={{ color: hoverColor, textDecoration: "none" }} ml={4}>
